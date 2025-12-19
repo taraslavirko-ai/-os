@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклад посилань та кнопок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Великий текстовий документ з посиланнями та кнопками</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Розділ 1</a></li>
+                <li><a href="#section2">Розділ 2</a></li>
+                <li><a href="#section3">Розділ 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Розділ 1 -->
+        <section id="section1">
+            <h2>Розділ 1: Вступ</h2>
+            <p>
+                Тут можна написати великий текст, наприклад про HTML та CSS. 
+                Також ми можемо створювати <a href="#section3">посилання на інший розділ</a> у цьому ж документі.
+            </p>
+            <!-- Власноруч створена кнопка -->
+            <button class="my-button" onclick="alert('Ви натиснули власноруч створену кнопку!')">Натисни мене</button>
+        </section>
+
+        <!-- Розділ 2 -->
+        <section id="section2">
+            <h2>Розділ 2: Посилання на інші документи</h2>
+            <p>
+                Тут можна додати посилання на наші попередні роботи, розміщені на GitHub:
+            </p>
+            <ul>
+                <li><a href="https://github.com/yourusername/project1" target="_blank">Попередній проект 1</a></li>
+                <li><a href="https://github.com/yourusername/project2" target="_blank">Попередній проект 2</a></li>
+            </ul>
+            <!-- Кнопка з генератора -->
+            <a href="https://github.com/yourusername/project3" target="_blank" class="generated-button">Перейти до проекту 3</a>
+        </section>
+
+        <!-- Розділ 3 -->
+        <section id="section3">
+            <h2>Розділ 3: JavaScript функція</h2>
+            <p>
+                Натисніть кнопку нижче, щоб запустити функцію, яка змінює текст на сторінці.
+            </p>
+            <button onclick="changeText()">Запустити JS функцію</button>
+            <p id="js-text">Тут з’явиться результат функції.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ваше ім'я</p>
+    </footer>
+
+    <script>
+        function changeText() {
+            document.getElementById('js-text').innerText = 'Функція JavaScript успішно виконана!';
+        }
+    </script>
+</body>
+</html>
